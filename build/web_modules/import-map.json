@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "core-js/stable": "./core-js/stable.js",
+    "regenerator-runtime/runtime.js": "./regenerator-runtime/runtime.js",
+    "vue": "./vue.js"
+  }
+}

@@ -1,0 +1,1 @@
+import o from"../__snowpack__/env.js";import.meta.env=o;import"../web_modules/core-js/stable.js";import"../web_modules/regenerator-runtime/runtime.js";import{createApp as t}from"../web_modules/vue.js";import m from"./App.js";const e=t(m);e.mount("#app"),import.meta.hot&&(import.meta.hot.accept(),import.meta.hot.dispose(()=>{e.unmount()}));

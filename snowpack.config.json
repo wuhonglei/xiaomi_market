@@ -1,0 +1,7 @@
+{
+    "extends": "@snowpack/app-scripts-vue",
+    "plugins": [
+        "@snowpack/plugin-babel",
+        "@hisystems/snowpack-plugin-postcss"
+    ]
+}

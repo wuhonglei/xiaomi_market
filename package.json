@@ -1,26 +1,26 @@
 {
-  "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "test": "echo \"Vue 3.0 test support is still in progress.\" && exit 1"
-  },
-  "dependencies": {
-    "regenerator-runtime": "^0.13.7",
-    "vue": "^3.0.0-rc.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@hisystems/snowpack-plugin-postcss": "^1.0.3",
-    "@snowpack/app-scripts-vue": "^1.8.4",
-    "@snowpack/plugin-babel": "^2.1.0",
-    "@snowpack/plugin-build-script": "^2.0.6",
-    "core-js": "^3.6.5",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.2",
-    "postcss-preset-env": "^6.7.0",
-    "snowpack": "^2.10.0",
-    "tailwindcss": "^1.7.6"
-  }
+    "scripts": {
+        "start": "snowpack dev",
+        "build": "snowpack build",
+        "test": "echo \"Vue 3.0 test support is still in progress.\" && exit 1"
+    },
+    "dependencies": {
+        "regenerator-runtime": "^0.13.7",
+        "vue": "^3.0.0-rc.4"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.11.6",
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@hisystems/snowpack-plugin-postcss": "^1.0.3",
+        "@snowpack/app-scripts-vue": "^1.8.4",
+        "@snowpack/plugin-babel": "^2.1.0",
+        "@snowpack/plugin-build-script": "^2.0.6",
+        "core-js": "^3.6.5",
+        "postcss": "^7.0.32",
+        "postcss-cli": "^7.1.2",
+        "postcss-preset-env": "^6.7.0",
+        "snowpack": "^2.10.0",
+        "tailwindcss": "^1.7.6"
+    }
 }

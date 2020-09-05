@@ -1,1 +1,0 @@
-import"./App.css.proxy.js";import r from"./components/Card.js";const e={components:{MiCard:r},data(){return{message:"Learn Vue"}}};import{resolveComponent as t,createVNode as c,openBlock as n,createBlock as s}from"../web_modules/vue.js";const a={class:"App"};export function render(p,d){const o=t("mi-card");return n(),s("div",a,[c(o)])}e.render=render;export default e;

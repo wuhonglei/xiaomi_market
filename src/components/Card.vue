@@ -6,19 +6,19 @@
 
 <script>
 export default {
-    data() {
-        let name = 'wu'
-        return {
-            name: name?.startsWith('w')
-        }
-    },
+	data() {
+		let name = "wu";
+		return {
+			name: name?.startsWith("w"),
+		};
+	},
 };
 </script>
 
 <style lang="postcss" scoped>
 .container {
-    & > p {
-        color: red;
-    }
+	& > p {
+		color: red;
+	}
 }
 </style>

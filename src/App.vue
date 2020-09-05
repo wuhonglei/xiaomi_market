@@ -1,16 +1,17 @@
 <template>
-	<div class="App">
-    <mi-card></mi-card>
+	<div class="App p-1 h-full">
+		<mi-card></mi-card>
 	</div>
 </template>
 
 <script>
-import MiCard from './components/Card.vue';
+import MiCard from "./components/Card.vue";
 export default {
-  components: {
-    MiCard
-  },
+	components: {
+		MiCard,
+	},
 	data() {
+		let name;
 		return {
 			message: "Learn Vue",
 		};

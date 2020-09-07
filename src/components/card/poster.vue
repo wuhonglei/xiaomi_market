@@ -1,5 +1,5 @@
 <template>
-	<base-card size="normal">
+	<base-card :size="size">
 		<img
 			class="w-full h-full"
 			v-bind="$attrs"

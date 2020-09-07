@@ -10,12 +10,21 @@
 				:alt="data.name"
 			>
 		</div>
-		<i-text type="name">{{data.name}}</i-text>
-		<i-text type="desc">{{data.desc}}</i-text>
+		<i-text
+			class="name"
+			type="name"
+		>{{data.name}}</i-text>
+		<i-text
+			type="desc"
+			class="desc"
+		>{{data.desc}}</i-text>
 		<div class="flex">
-			<i-text type="price">{{data.price}}</i-text>
 			<i-text
-                class="ml-2"
+				class="price"
+				type="price"
+			>{{data.price}}</i-text>
+			<i-text
+				class="ml-2"
 				type="origin-price"
 				v-if="data.originPrice"
 			>{{data.originPrice}}</i-text>
@@ -58,5 +67,17 @@ export default {
 	width: 160px;
 	height: 160px;
 	margin-bottom: 18px;
+}
+
+.name {
+	margin-bottom: 2px;
+}
+
+.price {
+	margin-bottom: 14px;
+}
+
+.desc {
+	margin-bottom: 10px;
 }
 </style>

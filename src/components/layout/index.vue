@@ -77,10 +77,10 @@ export default {
 }
 
 .single-poster {
-	grid-area: 1/1 2/2;
+	grid-area: 1/1 / 2/2;
 }
 
 .double-poster {
-	grid-area: 1/1 3/2;
+	grid-area: 1/1 / 3/2;
 }
 </style>

@@ -88,10 +88,6 @@ export default {
 	line-height: 58px;
 }
 
-.name {
-	margin-bottom: 2px;
-}
-
 .desc,
 .origin-price {
 	color: #b0b0b0;
@@ -99,12 +95,10 @@ export default {
 
 .desc {
 	font-size: 12px;
-	margin-bottom: 10px;
 }
 
 .price {
 	color: #ff6700;
-	margin-bottom: 14px;
 }
 
 .origin-price {

@@ -1,9 +1,9 @@
 <template>
 	<div class="flex flex-col justify-between">
-		<poster-card
+		<goods-card
 			:data="data"
 			size="small"
-		></poster-card>
+		></goods-card>
 		<more-card
 			:title="title"
 			:type="type"
@@ -16,12 +16,12 @@
  * 商品 + 查看更多卡片
  */
 
-import PosterCard from 'src/components/card/poster.vue';
+import GoodsCard from 'src/components/card/goods.vue';
 import MoreCard from 'src/components/card/more.vue';
 export default {
 	name: 'MoreGoods',
 	components: {
-		PosterCard,
+		GoodsCard,
 		MoreCard
 	},
 	props: {

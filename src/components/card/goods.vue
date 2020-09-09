@@ -1,7 +1,7 @@
 <template>
 	<base-card
-		size="normal"
-		class="inline-flex flex-col items-center"
+		:size="size"
+		class="container inline-flex flex-col items-center"
 	>
 		<div class="figure">
 			<img
@@ -10,24 +10,26 @@
 				:alt="data.name"
 			>
 		</div>
-		<i-text
-			class="name"
-			type="name"
-		>{{data.name}}</i-text>
-		<i-text
-			type="desc"
-			class="desc"
-		>{{data.desc}}</i-text>
-		<div class="flex">
+		<div class="text-container flex flex-col items-center m-auto">
 			<i-text
-				class="price"
-				type="price"
-			>{{data.price}}</i-text>
+				class="name"
+				type="name"
+			>{{data.name}}</i-text>
 			<i-text
-				class="ml-2"
-				type="origin-price"
-				v-if="data.originPrice"
-			>{{data.originPrice}}</i-text>
+				type="desc"
+				class="desc"
+			>{{data.desc}}</i-text>
+			<div class="flex">
+				<i-text
+					class="price"
+					type="price"
+				>{{data.price}}</i-text>
+				<i-text
+					class="ml-2"
+					type="origin-price"
+					v-if="data.originPrice"
+				>{{data.originPrice}}</i-text>
+			</div>
 		</div>
 	</base-card>
 </template>
@@ -54,19 +56,53 @@ export default {
 		iText
 	},
 	props: {
+
+		// 卡片尺寸：small、normal、big
+		size: {
+			type: String,
+			default: 'normal'
+		},
+
 		data: {
 			type: Object,
 			required: true
 		}
-	}
+	},
 }
 </script>
 
 <style lang="postcss" scoped>
+.container {
+	padding: 30px;
+	padding-top: 0;
+}
+
 .figure {
 	width: 160px;
 	height: 160px;
 	margin-bottom: 18px;
+}
+
+.small-card.container {
+	padding-top: 30px;
+}
+
+.small-card .figure {
+	width: 80px;
+	height: 80px;
+}
+
+.small-card .desc {
+	display: none;
+}
+
+.small-card {
+	@apply flex-row-reverse;
+}
+
+.small-card .text-container {
+	@apply items-start;
+	width: 94px;
 }
 
 .name {

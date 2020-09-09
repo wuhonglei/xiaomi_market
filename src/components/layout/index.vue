@@ -38,6 +38,8 @@ const MODE = {
 export default {
 	name: 'CardLayout',
 	props: {
+
+		// 单行还是双行模式
 		mode: {
 			type: String,
 			default: MODE.SINGLE,

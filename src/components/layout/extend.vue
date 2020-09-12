@@ -1,10 +1,15 @@
 <template>
 	<card-layout :mode="mode">
 		<template
-			v-if="data.poster"
+			v-if="posterSize"
 			v-slot:poster
 		>
-			<poster-card v-bind="data.poster"></poster-card>
+			<poster-card
+				v-for="item in data.posters"
+				:key="item.src"
+				:size="posterSize"
+				v-bind="item"
+			></poster-card>
 		</template>
 		<goods-card
 			v-for="item in goodsList"
@@ -28,6 +33,8 @@ import CardLayout from './index.vue';
 import GoodsCard from 'src/components/card/goods.vue';
 import PosterCard from 'src/components/card/poster.vue';
 import MoreGoods from 'src/components/card/more_goods.vue';
+
+import { get } from 'lodash-es';
 
 const MODE = {
 	SINGLE: 'single',
@@ -78,11 +85,16 @@ export default {
 			};
 			let posterCount = {
 				big: 2,
-				small: 1
+				normal: 1
 			};
-
-			let posterSize = posterCount[this.data.poster?.size] ?? 0;
+			let posterSize = get(this.data, 'posters.length', 0) * posterCount[this.posterSize] ?? 0;
 			return modeCount[this.mode] - posterSize;
+		},
+		posterSize() {
+			if (!this.data.posters?.length) {
+				return 0;
+			}
+			return ((this.mode === MODE.SINGLE || this.data.posters.length === 2) ? 'normal' : 'big');
 		},
 		goodsLen() {
 			return this.data.goods.length;

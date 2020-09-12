@@ -1,9 +1,11 @@
 <template>
 	<base-card :size="size">
-		<img
-			class="w-full h-full"
-			v-bind="$attrs"
-		>
+		<a :href="href" target="_blank">
+			<img
+				class="w-full h-full"
+				:src="src"
+			>
+		</a>
 	</base-card>
 </template>
 
@@ -14,10 +16,10 @@
 
 import BaseCard from './base.vue';
 export default {
-    name: 'PosterCard',
-    components: {
-        BaseCard
-    },
+	name: 'PosterCard',
+	components: {
+		BaseCard
+	},
 	props: {
 		size: {
 			type: String,
@@ -25,6 +27,14 @@ export default {
 			validator(value) {
 				return ['small', 'normal', 'big'].includes(value);
 			}
+		},
+		src: {
+			type: String,
+			default: ''
+		},
+		href: {
+			type: String,
+			default: ''
 		}
 	}
 }

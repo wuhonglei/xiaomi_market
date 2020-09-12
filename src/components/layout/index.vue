@@ -55,6 +55,7 @@ export default {
 		},
 		posterClass() {
 			return [
+				'poster-wrapper',
 				this.isSingleMode ? 'single-poster' : 'double-poster'
 			];
 		}
@@ -76,6 +77,12 @@ export default {
 	grid-auto-rows: var(--normal-height);
 	grid-column-gap: var(--column-gap);
 	grid-row-gap: var(--row-gap);
+}
+
+.poster-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .single-poster {

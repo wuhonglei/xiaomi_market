@@ -1,36 +1,42 @@
 <template>
 	<base-card
 		:size="size"
-		class="container inline-flex flex-col items-center"
+		class="container"
 	>
-		<div class="figure">
-			<img
-				class="w-full h-full bg-cover"
-				:src="data.src"
-				:alt="data.name"
-			>
-		</div>
-		<div class="text-container flex flex-col items-center m-auto">
-			<i-text
-				class="name"
-				type="name"
-			>{{data.name}}</i-text>
-			<i-text
-				type="desc"
-				class="desc"
-			>{{data.desc}}</i-text>
-			<div class="flex">
-				<i-text
-					class="price"
-					type="price"
-				>{{data.price}}</i-text>
-				<i-text
-					class="ml-2"
-					type="origin-price"
-					v-if="data.originPrice"
-				>{{data.originPrice}}</i-text>
+		<a
+			class="link-wrapper w-full h-full inline-flex flex-col items-center"
+			:href="data.href"
+			target="_blank"
+		>
+			<div class="figure">
+				<img
+					class="w-full h-full bg-cover"
+					:src="data.src"
+					:alt="data.name"
+				>
 			</div>
-		</div>
+			<div class="text-container flex flex-col items-center m-auto">
+				<i-text
+					class="name"
+					type="name"
+				>{{data.name}}</i-text>
+				<i-text
+					type="desc"
+					class="desc"
+				>{{data.desc}}</i-text>
+				<div class="flex">
+					<i-text
+						class="price"
+						type="price"
+					>{{data.price}}</i-text>
+					<i-text
+						class="ml-2"
+						type="origin-price"
+						v-if="data.originPrice"
+					>{{data.originPrice}}</i-text>
+				</div>
+			</div>
+		</a>
 	</base-card>
 </template>
 
@@ -83,7 +89,7 @@ export default {
 	margin-bottom: 18px;
 }
 
-.small-card.container {
+.small-card .link-wrapper {
 	padding-top: 30px;
 }
 
@@ -96,7 +102,7 @@ export default {
 	display: none;
 }
 
-.small-card {
+.small-card .link-wrapper {
 	@apply flex-row-reverse;
 }
 

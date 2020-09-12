@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<banner :data="data.banner"></banner>
+		<banner
+			class="banner-wrapper"
+			:data="data.banner"
+		></banner>
 		<div>
 			<i-text type="title">{{data.title}}</i-text>
 		</div>
@@ -36,28 +39,36 @@ export default {
 					title: '',
 					mode: '',
 					showMore: '',
-					poster: {
-						size: '',
-						src: ''
-					},
-					goods: [{
-						src: '',
-						name: '',
-						desc: '',
-						price: '',
-						originPrice: ''
-					}]
+					data: {
+						posters: [{
+							src: ''
+						}],
+						goods: [{
+							src: '',
+							name: '',
+							desc: '',
+							price: '',
+							originPrice: ''
+						}]
+					}
 				}
 			}
 		}
 	},
 	computed: {
 		extendData() {
-			return pick(this.data, ['mode', 'showMore', 'poster', 'goods']);
+			return pick(this.data, ['mode', 'showMore', 'data']);
 		}
+	},
+	created() {
+		console.info(this.data);
 	},
 }
 </script>
 
 <style lang="postcss" scoped>
+.banner-wrapper {
+	margin-top: 22px;
+	margin-bottom: 22px;
+}
 </style>

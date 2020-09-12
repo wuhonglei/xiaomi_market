@@ -1,6 +1,6 @@
 <template>
 	<div class="container w-full">
-		<a :href="data.href">
+		<a :href="data.href" target="_blank">
 			<img
 				class="w-full h-full"
 				:src="data.src"

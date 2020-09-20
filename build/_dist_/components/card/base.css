@@ -1,0 +1,28 @@
+.card-container[data-v-f1acaaf0] {
+  --width: 234px;
+  --small-height: 143px;
+  --normal-height: 300px;
+  --big-height: 614px;
+}
+
+.card-container[data-v-f1acaaf0] {
+  transition: transform 0.4s ease
+}
+
+.card-container[data-v-f1acaaf0].small-card,
+	.card-container[data-v-f1acaaf0].normal-card,
+	.card-container[data-v-f1acaaf0].big-card {
+    width: var(--width);
+  }
+
+.card-container[data-v-f1acaaf0].small-card {
+    height: var(--small-height);
+  }
+
+.card-container[data-v-f1acaaf0].normal-card {
+    height: var(--normal-height);
+  }
+
+.card-container[data-v-f1acaaf0].big-card {
+    height: var(--big-height);
+  }

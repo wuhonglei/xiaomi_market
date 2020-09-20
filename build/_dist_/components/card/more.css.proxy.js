@@ -1,0 +1,23 @@
+const code=`.more-container[data-v-3e8e05e8] {
+  width: 174px;
+  height: 48px;
+  grid-template-columns: 1fr 48px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+		"title icon"
+		"type icon";
+}
+
+.title[data-v-3e8e05e8] {
+  font-size: 18px;
+  color: #333;
+}
+
+.type[data-v-3e8e05e8] {
+  font-size: 12px;
+  color: #757575;
+}
+
+.icon[data-v-3e8e05e8] {
+  grid-area: icon;
+}`,styleEl=document.createElement("style"),codeEl=document.createTextNode(code);styleEl.type="text/css",styleEl.appendChild(codeEl),document.head.appendChild(styleEl);

@@ -11,6 +11,7 @@
 ![完成效果](./screenshots/home_page.gif)
 
 ## 小米商城首页数据爬取代码
+在浏览器 `console` 执行以下代码
 ```javascript
 let banners = document.querySelectorAll('.home-banner-box');
 let dataList = [];
